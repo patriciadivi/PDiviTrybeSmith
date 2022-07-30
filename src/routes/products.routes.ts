@@ -4,5 +4,6 @@ import controllers from '../controllers/index';
 const products = Router();
 
 products.post('/products', controllers.postProductsController);
+products.get('/products', controllers.getProductsController);
 
 export default products;
