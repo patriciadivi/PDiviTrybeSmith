@@ -1,6 +1,11 @@
 import { Request , Response } from "express";
-const postProductsController = (_req: Request, res: Response): Response => {
-   return res.status(200).json({ message: 'postProductsController' });
+import { IProducts } from "../interfaces/IProducts";
+import services from '../services/index';
+
+const postProductsController = async (req: Request, res: Response) => {
+    const products = req.body as IProducts;
+    const postProductsServices = await services.postProductsServices(products)
+   return res.status(201).json(postProductsServices);
 };
 
 export default postProductsController;
