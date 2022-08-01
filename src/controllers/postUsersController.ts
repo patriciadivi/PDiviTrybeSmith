@@ -7,8 +7,7 @@ const postUsersController = async (req: Request, res: Response) => {
   
   const postUserServices = await services.postUsersServices(users);
   console.log('postUserServices', postUserServices);
-  // return res.status(201).json(postUserServices);
-  return res.status(201).json({ message: 'ok' });
+  return res.status(201).json({ token: postUserServices });
 };
 
 export default postUsersController;
