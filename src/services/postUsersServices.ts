@@ -1,7 +1,7 @@
-import { IProducts } from '../interfaces/IProducts';
+import { IUser } from '../interfaces/IUser';
 // import models from '../models/index';
 
-const postUsersServices = async (users: IProducts) => {
+const postUsersServices = async (users: IUser) => {
   console.log('users >>>>>>>>>>>', users);
   
   // const postUsersModels = await models.postUsersModels(products);
