@@ -1,9 +1,9 @@
 import { Router } from 'express';
 import controllers from '../controllers/index';
 // const userValidation = '../middlewares/requestLogin';
-const user = Router();
+const users = Router();
 
-user.post('/products', controllers.postProductsController);
+users.post('/users', controllers.postUsersController);
 // user.get('/products', controllers.getProductsController);
 
-export default user;
+export default users;
