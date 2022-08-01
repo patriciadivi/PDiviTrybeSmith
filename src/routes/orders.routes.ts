@@ -3,6 +3,6 @@ import controllers from '../controllers/index';
 
 const orders = Router();
 
-orders.post('/orders', controllers.getOrdersController);
+orders.get('/orders', controllers.getOrdersController);
 
 export default orders;
